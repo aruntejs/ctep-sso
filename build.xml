@@ -1,0 +1,89 @@
+<!-- ====================================================================== 
+     Date:     May 2011
+     Project:  Struts 2 Service Provider Application
+     ====================================================================== -->
+<project name="ctsusso" default="archivefour" basedir=".">
+    <description>CTSU SSO test UI</description>
+    <property file="build.properties"/>
+    <!-- ==================== Clean Target ==================================== -->
+    <!--
+      The "clean" target deletes any previous "build" and "dist" directory,
+      so that you can be ensured the application can be built from scratch.
+    -->
+    <target name="clean" description="Delete old build and dist directories">
+        <delete dir="${dist.home}"/>
+        <delete dir="${build.home}"/>
+    </target>
+    <!-- ==================== Init Target ================================== -->
+    <!--
+      The "init" target is used to create the "build" destination directory,
+      Normally, this task is executed indirectly when needed.
+    -->
+    <target name="init" depends="clean"  description="Create build directory">
+        <mkdir dir="${build.home}" />
+    </target>
+    <!-- ==================== Compile Target ================================== -->
+    <!--
+      The "compile" target transforms source files (from your "src" directory)
+      into class files in the appropriate location in the build directory.
+      This example assumes that you will be including your classes in an
+      unpacked directory hierarchy under "/WEB-INF/classes".
+    -->
+    <target name="compile" depends="init" description="Compile Java sources">
+        <mkdir dir="${build.home}/WEB-INF/classes" />
+        <javac srcdir="${source.home}" destdir="${build.home}/WEB-INF/classes"
+            debug="${compile.debug}" deprecation="${compile.deprecation}" optimize="${compile.optimize}" 
+            target="1.5" includeantruntime="false">
+            <classpath>
+                <path>
+                    <fileset dir="${lib.home}" />
+                </path>
+            </classpath>
+        </javac>
+    </target>
+    <!-- ==================== Build Target ================================== -->
+    <!--
+      The "build" target copies all non class files to build directory
+    -->
+    <target name="buildfive" depends="compile" description="Copies all non Java classes to build directoy">
+        <copy todir="${build.home}">
+            <fileset dir="${webapp.home}" excludes="CVS,**/*.class,**/**/servlet.jar,**/**/xercesImpl-2.9.1.jar,**/**/xml-apis.jar, **/**/log4j-1.2.14.jar, **/**/slf4j-api-1.6.1.jar, **/**/slf4j-log4j12-1.6.1.jar" />
+        </copy>
+        <copy todir="${build.home}/WEB-INF/classes">
+            <fileset dir="${source.home}" excludes="CVS,**/*.java" />
+        </copy>
+        <copy todir="${build.home}/WEB-INF/classes">        	 
+        	<fileset file="${source.home}/sp.properties" />
+        </copy>
+    </target>
+    
+    <target name="buildfour" depends="compile" description="Copies all non Java classes to build directoy">
+        <copy todir="${build.home}">
+            <fileset dir="${webapp.home}" excludes="CVS,**/*.class" />
+        </copy>
+        <copy todir="${build.home}/WEB-INF/classes">
+            <fileset dir="${source.home}" excludes="CVS,**/*.java" />
+        </copy>
+        <copy todir="${build.home}/WEB-INF/classes">        	 
+        	<fileset file="${source.home}/sp.properties" />
+        </copy>
+    </target>
+    <!-- ==================== Archive Target ================================== -->
+    <!--
+      The "archive" target create a binary archive of all files in build.home
+    -->
+    <target name="archivefive" depends="buildfive" description="Create binary archive of all files in dist.home">
+        <mkdir dir="${dist.home}" />
+        <!-- Create application WAR file -->
+        <jar jarfile="${dist.home}/${app.name}.war" basedir="${build.home}" />
+        <copy todir="${deployfive.dir}" file="${dist.home}/${app.name}.war"/>
+    </target>
+    
+    <target name="archivefour" depends="buildfour" description="Create binary archive of all files in dist.home">
+        <mkdir dir="${dist.home}" />
+        <!-- Create application WAR file -->
+        <jar jarfile="${dist.home}/${app.name}.war" basedir="${build.home}" />
+        <copy todir="${deployfour.dir}" file="${dist.home}/${app.name}.war"/>
+    </target>
+</project>
+

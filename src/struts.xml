@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <package name="struts2_sp" extends="struts-default"> 
+       <action name="spSingleSignOn*" class="com.westat.ctsu.action.SPSingleSignOn" method="{1}">
+            <result>index.jsp</result>
+            <result name="Alternate">/WEB-INF/iframePage.jsp</result>
+            <result name="authenticatefromIdp">/WEB-INF/redirect.jsp</result>
+            <result name="validatedfromIdp">/WEB-INF/welcome.jsp</result>
+            <result name="showIdP">/WEB-INF/selectIDP.jsp</result> 
+            <result name="error">/WEB-INF/error.jsp</result>
+        </action>
+         <action name="showResults">
+         	<result>/WEB-INF/welcome.jsp</result> 
+         </action>
+         <action name="processPassThroughRequestOPEN" class="com.westat.ctsu.action.SPSingleSignOn" method="processPassThroughOPEN">
+            <result name="redirect" type="redirect">${url}</result> 
+         </action>
+         <action name="processPassThroughRequestNET" class="com.westat.ctsu.action.SPSingleSignOn" method="processPassThroughNET">
+            <result name="redirect" type="redirect">${url}</result> 
+         </action>
+         <action name="processPassThroughRequestIMedidata" class="com.westat.ctsu.action.SPSingleSignOn" method="processPassThroughIMedidata">
+            <result name="redirect" type="redirect">${url}</result> 
+         </action>
+         <action name="processPassThroughRequestInnovate" class="com.westat.ctsu.action.SPSingleSignOn" method="processPassThroughInnovate">
+            <result name="redirect" type="redirect">${url}</result> 
+         </action>
+         <action name="processDeepLinkRequestInnovate" class="com.westat.ctsu.action.SPSingleSignOn" method="processDeepLinkInnovate">
+            <result name="redirect" type="redirect">${url}</result> 
+         </action>
+         <action name="processDeepLinkRequestOpen" class="com.westat.ctsu.action.SPSingleSignOn" method="processDeepLinkOpen">
+            <result name="redirect" type="redirect">${url}</result> 
+         </action>
+    </package>
+</struts>

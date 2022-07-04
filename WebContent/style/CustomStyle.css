@@ -1,0 +1,335 @@
+.subhdrBGMain{ /* for the cell that cpagebannerontains the application header */  
+  border-left:1px solid #CCCCCC; /* constant: medium gray */
+  border-right:1px solid #CCCCCC; /* constant: medium gray */
+  border-top:1px solid #CCCCCC; /* constant: medium gray */
+  border-bottom:1px solid #CCCCCC; /* constant: medium gray */
+  background-color: #6E81A6;
+  padding: 0px 0px 0px 0px;
+  text-align: left;
+}
+.BreadCrumbs
+{
+	font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.7em;
+	font-weight:bold;	
+  color: White;
+}
+.UserName{
+	font-family:arial,helvetica,verdana,sans-serif;
+	font-size:0.8em;
+	font-weight:bold;
+  color: White;
+	position:relative;
+	top:0%;
+	left:0%
+}
+.PasswordExpired{
+	font-family:arial,helvetica,verdana,sans-serif;
+	font-size:0.7em;
+	font-weight:bold;
+  color: White;
+	position:relative;
+	top:0%;
+	left:0%
+}
+.RegistrationExpired{
+	font-family:arial,helvetica,verdana,sans-serif;
+	font-size:0.9em;
+	font-weight:normal;
+  color: White;
+	position:relative;
+	top:0%;
+	left:0%
+}
+.headerLink
+{
+	font-family:arial,helvetica,verdana,sans-serif;
+	font-size:0.7em;
+	font-weight:bold;
+  vertical-align: bottom;
+  color: White;
+}
+
+.AuthenticationError{ /* for the area below the title content of the home page */
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.9em;
+  font-weight: bold;
+  padding:0.5in 10pt 0in 10pt;
+  line-height:1.5em;
+}
+
+
+/*###############
+DATA TABLE BEGINS 
+###############*/
+.customDataTable{ /* for the main table below the labels */
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.7em;
+  color:#000000; /* constant: black */
+  border-top:1px solid #5C5C5C; /* constant: dark gray */
+  border-left:1px solid #5C5C5C; /* constant: dark gray */
+}
+
+.customdataTableHeader{
+  text-align: center;
+  font-family:arial,helvetica,verdana,sans-serif;
+  background-color:#CCCCCC; /* constant: medium gray */
+  color:#000000; /* constant: black */
+  font-size: 0.9em;
+  font-weight:bold;
+  border-right:1px solid #5C5C5C; /* constant: dark gray */
+  border-bottom:1px solid #5C5C5C; /* constant: dark gray */
+  /*padding:0pt 0pt 0pt 0pt;*/
+}
+
+.customFormRequiredLabel{
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.9em;
+  font-weight:bold;
+  /*background-color:#F4F4F5; *//* constant: light gray */
+  color:#000000; /* constant: black */  
+	text-align:center;  
+}
+
+.customLabel{
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.9em;
+  font-weight:bold;
+  color:#000000; /* constant: black */  
+}
+
+.customFormField{
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.9em;
+  color:#000000; /* constant: black */  
+  /*background-color:#F4F4F5; *//* constant: light gray */
+}
+
+.customFormField2{
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.9em;
+  color:#000000; /* constant: black */
+  border-left:1px solid #5C5C5C; /* constant: dark gray */
+  border-bottom:1px solid #5C5C5C; /* constant: dark gray */
+  border-top:1px solid #5C5C5C; /* constant: dark gray */
+  background-color:#F4F4F5; /* constant: light gray */
+}
+
+.customFormField3{
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.9em;
+  color:#000000; /* constant: black */  
+  border-bottom:1px solid #5C5C5C; /* constant: dark gray */
+  border-top:1px solid #5C5C5C; /* constant: dark gray */
+  border-right:1px solid #5C5C5C; /* constant: dark gray */  
+}
+
+td.formFieldColored{ /* for the cell that contains the form elements */
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.7em;
+  color:#000000; /* constant: black */  
+  border-right:1px solid #5C5C5C; /* constant: dark gray */
+  border-bottom:1px solid #5C5C5C; /* constant: dark gray */
+  background-color:rgb(204,204,204); /* constant: light gray */
+}
+
+textarea.formFieldSizedSelect,select.formFieldSizedSelect{ /* for the form elements themselves and with a constant width (on elements) */
+  font-family:arial,helvetica,verdana,sans-serif;
+  border:1px solid #5C5C5C; /* constant: dark gray */
+  font-size:0.9em;	
+}
+
+.hideDiv{margin: 0px 5px 0px 5px;display: none;width:100%;}
+.showDiv{margin: 0px 5px 0px 5px;display: block;font-size:90%;width:100%;}
+
+.enableDiv{margin: 0px 5px 0px 5px;display: block;font-size:90%;width:100%;position: relative;}
+
+.HeadingsmallBold{
+      FONT-SIZE: 1em;font-family:arial,sans-serif;FONT-WEIGHT:BOLD; color:rgb(0,51,153);
+}
+.HeadingsmallBold1{
+      FONT-SIZE: 1em;font-family:arial,sans-serif;FONT-WEIGHT:BOLD; color:rgb(0,51,153);
+}
+.normal{font-family:arial,sans-serif;font-size: 0.8em}
+div.table {
+  border: 2px solid #1E1EA6;
+  border-color: #1E1EA6 #1E1EA6 #1E1EA6 #1E1EA6;
+  -moz-bord er-radius: 0.5em 0.5em 0.5em 0.5em;
+  border-radius-topright: .5em;
+  border-radius-topleft: .5em;
+  border-radius-bottomright: .5em;
+  border-radius-bottomleft: .5em;
+  padding: .25em;
+  position: relative;
+  width: 100%;
+}
+
+.editlabelbold{  BACKGROUND-COLOR: #dddddc; FONT-SIZE: 0.7em;font-family:arial,sans-serif;FONT-WEIGHT: bold; }
+.editData1 {
+	FONT-SIZE: 0.7em;  TEXT-ALIGN: left;BACKGROUND-COLOR: #eeefff; font-family:arial,sans-serif; text-decoration: none
+}
+.editData0 {
+	FONT-SIZE: 0.7em;
+	BACKGROUND-COLOR: #eeeeee;
+	TEXT-ALIGN: left;
+	font-family:arial,sans-serif;
+	text-decoration: none;
+	text-decoration: none;
+}
+
+.formRequiredLabelNoBorder{ /* for the non-required form labels */
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.7em;
+  background-color:#F4F4F5; /* constant: light gray */
+  color:#000000; /* constant: black */  
+	text-align:right;
+  font-weight: bold;
+}
+.formLabelNoBorder{ /* for the non-required form labels */
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.7em;
+  background-color:#F4F4F5; /* constant: light gray */
+  color:#000000; /* constant: black */  
+	text-align:right;  
+}
+.formFieldNoBorder{ /* for the non-required form labels */
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.9em;
+  background-color:#F4F4F5; /* constant: light gray */
+  color:#000000; /* constant: black */  
+	text-align:left;  
+}
+
+.formInstruction{ /* for messages above the form */
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.8em;
+  color:rgb(51,51,153);
+}
+.formMessage{ /* for messages above the form */
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.9em;
+  color:Black;/* rgb(0,0,0)*/
+  font-weight: bold;
+}
+
+.formOnScreenTextHeading{ /* for messages above the form */
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.9em;
+  color: rgb(0,51,153);
+  font-weight: bold;
+}
+
+.formOnScreenText{ /* for messages above the form */
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.8em;
+  color: Black;
+  font-weight: normal;
+}
+
+table.simple th{
+  background-color: #5C5C5C;
+   font-size:0.7em;
+   FONT-WEIGHT: bold;
+   color:White;
+   height: 20px;
+   text-decoration:none;
+}
+
+table.simple th.sortable a{
+  color: White;
+}
+
+
+table.simple tr.even {
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.7em;
+  color:#000000; /* constant: black */  
+	background-color: #eeefff;
+  width: 100%;
+}
+
+table.simple tr.odd {
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.7em;
+
+}
+table.simple {
+	border: 1px solid #ccc;
+	border-collapse: collapse;
+  width: 100%
+}
+
+table.simple td,table.simple th {
+	border: 1px solid #ccc;
+}
+
+.pagebanner{
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.7em;
+  border: 1px solid #ccc;
+  font-weight: bold;
+}
+
+.pagelinks{
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.7em;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  color:#000000;
+}
+
+span.pagebanner {
+	background-color: #eee;
+	border: 1px dotted #999;
+	padding: 2px 4px 2px 4px;
+	width: 50%;
+	margin-top: 10px;
+	display: block;
+	border-bottom: none;
+}
+
+span.pagelinks {
+	background-color: #eee;
+	border: 1px dotted #999;
+	padding: 2px 4px 2px 4px;
+	width: 50%;
+	display: block;
+	border-top: none;
+	margin-bottom: -5px;
+}
+input.customActionButton{ /* optional style for form and action buttons */
+  border-right:2px solid #5C5C5C; /* constant: dark gray */
+  border-bottom:2px solid #5C5C5C; /* constant: dark gray */
+  border-top:1px solid #CCCCCC; /* constant: medium gray */
+  border-left:1px solid #CCCCCC; /* constant: medium gray */
+  padding: 0in 0.1in 0in 0.1in;
+}
+
+input.customActionButton2{ /* optional style for form and action buttons */
+  border-right:2px solid #5C5C5C; /* constant: dark gray */
+  border-bottom:2px solid #5C5C5C; /* constant: dark gray */
+  border-top:1px solid #CCCCCC; /* constant: medium gray */
+  border-left:1px solid #CCCCCC; /* constant: medium gray */
+  padding: 0in 0in 0in 0in;
+}
+
+.formFieldWithTRBLBorders{
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.7em;
+  color:#000000; /* constant: black */    
+  background-color:#F4F4F5; /* constant: light gray */
+  border-top:1px solid #5C5C5C; /* constant: dark gray */
+  border-right:1px solid #5C5C5C; /* constant: dark gray */  
+  border-bottom:1px solid #5C5C5C; /* constant: dark gray */
+  border-left:1px solid #5C5C5C; /* constant: dark gray */
+}
+.formInfoTableCell{
+  font-family:arial,helvetica,verdana,sans-serif;
+  font-size:0.9em;
+  color:Black; /* constant: black */   
+  background-color:Menu; /* constant: light gray */
+  border-top:1px solid #5C5C5C; /* constant: dark gray */
+  border-right:1px solid #5C5C5C; /* constant: dark gray */  
+  border-bottom:1px solid #5C5C5C; /* constant: dark gray */
+  border-left:1px solid #5C5C5C; /* constant: dark gray */
+}
